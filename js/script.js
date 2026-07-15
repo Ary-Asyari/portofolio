@@ -40,3 +40,38 @@ document.querySelectorAll(".card[data-link]").forEach((card) => {
     actions.appendChild(a);
   }
 });
+
+// Mobile nav toggle
+const nav = document.getElementById("nav");
+const navToggle = document.getElementById("navToggle");
+
+navToggle.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("is-open");
+  navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+});
+
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+// Light/dark theme toggle
+const themeToggle = document.getElementById("themeToggle");
+const root = document.documentElement;
+
+function applyTheme(theme) {
+  root.setAttribute("data-theme", theme);
+  themeToggle.textContent = theme === "dark" ? "☀️" : "🌙";
+}
+
+const savedTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+applyTheme(savedTheme || systemTheme);
+
+themeToggle.addEventListener("click", () => {
+  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  localStorage.setItem("theme", next);
+  applyTheme(next);
+});
