@@ -220,6 +220,12 @@ img {
   font-weight: 600;
 }
 
+.skill-note {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
 /* Projects */
 .projects {
   padding: 64px 0;
@@ -239,7 +245,7 @@ img {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
