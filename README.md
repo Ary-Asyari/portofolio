@@ -3,6 +3,10 @@
 Situs portofolio pribadi, dibangun dengan HTML, CSS, dan JavaScript murni (tanpa framework),
 di-deploy lewat GitHub Pages.
 
+🔗 **Live demo:** https://ary-asyari.github.io/portofolio/
+
+![Preview situs portofolio](assets/preview.png)
+
 ## Isi
 
 - **Profil** — Full Stack Developer
