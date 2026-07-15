@@ -1,2 +1,6 @@
 # Original uncompressed screenshots (large files, not used by the site)
 image-*.png
+
+# Claude Code local config/session files — must not be published
+.claude/
+CLAUDE.md
